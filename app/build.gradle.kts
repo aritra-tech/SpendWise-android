@@ -61,6 +61,10 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // Test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -69,11 +73,27 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    //ViewModel
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.runtime.ktx.v286)
+
+    // Kotlin components
+    implementation (libs.kotlin.stdlib.jdk7)
+    api (libs.kotlinx.coroutines.core)
+    api (libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.collections.immutable)
+
     // Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+
+    // Coil
+    implementation(libs.coil.compose)
+
+    // Timber
+    implementation (libs.timber)
 
 }
