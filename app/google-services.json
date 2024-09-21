@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "813523963318",
+    "firebase_url": "https://spendwise-80a20-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "spendwise-80a20",
     "storage_bucket": "spendwise-80a20.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.aritra.spendwise"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "813523963318-8t71i4jv84bfkkuo5q9qvflvkev9jttm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aritra.spendwise",
+            "certificate_hash": "92b643549a4b01d3e7313a92f09299c8b16d5942"
+          }
+        },
+        {
+          "client_id": "813523963318-tvrbr110okfiv2qptn91dhdsqurlqff2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAW0iyUeClKONwUjtdsyoRCpmlSk7XR_4g"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813523963318-tvrbr110okfiv2qptn91dhdsqurlqff2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

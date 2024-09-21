@@ -89,6 +89,8 @@ dependencies {
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.play.services.auth)
+    implementation(libs.firebase.storage)
 
     // Coil
     implementation(libs.coil.compose)
