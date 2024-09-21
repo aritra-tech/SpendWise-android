@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.aritra.spendwise" />
+                  <option name="mobileSdkAppId" value="1:813523963318:android:34d27c7c2a596b71c60517" />
+                  <option name="projectId" value="spendwise-80a20" />
+                  <option name="projectNumber" value="813523963318" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

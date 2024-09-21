@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "813523963318",
+    "project_id": "spendwise-80a20",
+    "storage_bucket": "spendwise-80a20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813523963318:android:34d27c7c2a596b71c60517",
+        "android_client_info": {
+          "package_name": "com.aritra.spendwise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW0iyUeClKONwUjtdsyoRCpmlSk7XR_4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
