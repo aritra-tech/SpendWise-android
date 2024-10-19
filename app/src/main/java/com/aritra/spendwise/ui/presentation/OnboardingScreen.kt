@@ -25,7 +25,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -34,6 +33,15 @@ import androidx.navigation.NavController
 import com.aritra.spendwise.R
 import com.aritra.spendwise.components.SWButton
 import com.aritra.spendwise.model.OnboardingItem
+import com.aritra.spendwise.ui.theme.OnPrimaryContainerLight
+import com.aritra.spendwise.ui.theme.OnSurfaceLight
+import com.aritra.spendwise.ui.theme.OnSurfaceVariantLight
+import com.aritra.spendwise.ui.theme.PrimaryDark
+import com.aritra.spendwise.ui.theme.SurfaceTintLight
+import com.aritra.spendwise.ui.theme.SurfaceVariantLight
+import com.aritra.spendwise.ui.theme.bold22
+import com.aritra.spendwise.ui.theme.medium16
+import com.aritra.spendwise.ui.theme.medium18
 
 @Composable
 fun OnboardingScreen(
@@ -41,7 +49,6 @@ fun OnboardingScreen(
     modifier: Modifier = Modifier
 ) {
 
-    val context = LocalContext.current
     val pages = OnboardingItem.onboardingScreenItems()
     val pagerState = rememberPagerState(pageCount = {pages.size})
     val bottomPadding = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding()
@@ -49,12 +56,13 @@ fun OnboardingScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color.Black)
+            .background(SurfaceVariantLight)
             .padding(
                 start = 16.dp,
                 end = 16.dp,
                 bottom = bottomPadding
-            ),
+            )
+        ,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
         Spacer(modifier = Modifier.height(40.dp))
@@ -65,7 +73,7 @@ fun OnboardingScreen(
                     .align(Alignment.End)
                     .clickable{},
                 text = stringResource(R.string.skip),
-
+                style = medium18.copy(OnSurfaceLight)
             )
         }
 
@@ -116,6 +124,7 @@ fun OnboardingComponent(item: OnboardingItem, modifier: Modifier = Modifier) {
         Text(
             modifier = Modifier.padding(horizontal = 30.dp),
             text = item.title,
+            style = bold22.copy(OnPrimaryContainerLight),
             textAlign = TextAlign.Center
         )
 
@@ -124,6 +133,7 @@ fun OnboardingComponent(item: OnboardingItem, modifier: Modifier = Modifier) {
         Text(
             modifier = Modifier.padding(horizontal = 30.dp),
             text = item.text,
+            style = medium16.copy(SurfaceTintLight),
             textAlign = TextAlign.Center,
         )
     }
@@ -134,8 +144,8 @@ fun PageIndicator(
     pagesSize: Int,
     selectedPage: Int,
     modifier: Modifier = Modifier,
-    selectedColor: Color = Color.White,
-    unselectedColor: Color = Color.Gray
+    selectedColor: Color = PrimaryDark,
+    unselectedColor: Color = OnSurfaceVariantLight
 ) {
     Row(
         modifier = modifier,

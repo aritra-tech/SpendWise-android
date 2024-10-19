@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -17,6 +18,8 @@ import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.aritra.spendwise.R
+import com.aritra.spendwise.navigation.Screens
+import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(
@@ -35,6 +38,11 @@ fun SplashScreen(
         iterations = LottieConstants.IterateForever,
         isPlaying = true
     )
+
+    LaunchedEffect(Unit) {
+        delay(1000)
+        navController.navigate(Screens.OnboardingScreen.name)
+    }
 
     Surface {
         Column(
