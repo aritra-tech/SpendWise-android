@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.services)
     alias(libs.plugins.google.firebase.crashlytics)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -98,4 +99,6 @@ dependencies {
     // Timber
     implementation (libs.timber)
 
+    // Lottie Animation
+    implementation("com.airbnb.android:lottie-compose:5.0.3")
 }
