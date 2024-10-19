@@ -1,6 +1,5 @@
 package com.aritra.spendwise.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -11,18 +10,27 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
-    surface = Surface,
-    surfaceBright = SurfaceBright,
-    onSurface = OnSurface,
-    onSurfaceVariant = OnSurfaceVariant,
-    outline = Outline,
-    outlineVariant = OutlineVariant,
-    errorContainer = ErrorContainer
+private val DarkColorPalette = darkColorScheme(
+    primary = PrimaryDark,
+    primaryContainer = PrimaryContainerDark,
+    onPrimaryContainer = OnPrimaryContainerDark,
+    background = BackgroundDark,
+    surface = SurfaceDark,
+    onSurface = OnSurfaceDark,
+    surfaceTint = SurfaceTintDark,
+    surfaceVariant = SurfaceVariantDark,
+    onSurfaceVariant = OnSurfaceVariantDark,
 )
-
-private val LightColorScheme = lightColorScheme(
-
+private val LightColorPalette = lightColorScheme(
+    primary = PrimaryLight,
+    primaryContainer = PrimaryContainerLight,
+    onPrimaryContainer = OnPrimaryContainerLight,
+    background = BackgroundLight,
+    surface = SurfaceLight,
+    onSurface = OnSurfaceLight,
+    surfaceTint = SurfaceTintLight,
+    surfaceVariant = SurfaceVariantLight,
+    onSurfaceVariant = OnSurfaceVariantLight,
 )
 
 @Composable
@@ -38,8 +46,8 @@ fun SpendWiseTheme(
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> DarkColorScheme
-        else -> { LightColorScheme }
+        darkTheme -> DarkColorPalette
+        else -> { LightColorPalette }
     }
 
     MaterialTheme(
